@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.alexai.assistant.ui.media.ZoomImageView
+        android:id="@+id/zoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Selected photo"
+        android:visibility="gone" />
+
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/audio_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/audio_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        <SeekBar
+            android:id="@+id/audio_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:id="@+id/audio_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#CCCCCC"
+            android:textSize="13sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/audio_back10"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-10s"
+                android:textColor="#FFFFFF" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/audio_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Play" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/audio_fwd10"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+10s"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#99000000"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#99000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pick"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick another"
+            android:textColor="#FFFFFF" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zoom_out"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Zoom out"
+            android:minWidth="0dp"
+            android:text="-"
+            android:textColor="#FFFFFF" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zoom_in"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Zoom in"
+            android:minWidth="0dp"
+            android:text="+"
+            android:textColor="#FFFFFF" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zoom_fit"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:text="Fit"
+            android:textColor="#FFFFFF" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/alex_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView style="@style/AlexSection" android:text="GEMINI" />
+
+        <TextView
+            android:id="@+id/key_status"
+            style="@style/AlexBody" />
+
+        <EditText
+            android:id="@+id/api_key"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input_bg"
+            android:hint="Paste your Gemini API key"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/alex_text"
+            android:textColorHint="@color/alex_text_secondary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_key"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save key" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete_key"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Delete key" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/AlexBody"
+            android:layout_marginTop="8dp"
+            android:text="The key is stored encrypted on this device (Android Keystore). That protects it at rest, but not on a compromised phone. A public app should use a backend proxy instead. Never commit a key to GitHub." />
+
+        <EditText
+            android:id="@+id/model"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_bg"
+            android:hint="Model name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/alex_text"
+            android:textColorHint="@color/alex_text_secondary"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/persona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input_bg"
+            android:hint="Alex's personality (system prompt)"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minHeight="72dp"
+            android:padding="16dp"
+            android:textColor="@color/alex_text"
+            android:textColorHint="@color/alex_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_ai"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save model and personality" />
+
+        <TextView style="@style/AlexSection" android:text="VOICE" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/speak_responses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speak replies"
+            android:textColor="@color/alex_text" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/speak_confirmations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speak confirmation prompts"
+            android:textColor="@color/alex_text" />
+
+        <TextView
+            android:id="@+id/rate_label"
+            style="@style/AlexBody"
+            android:layout_marginTop="12dp" />
+        <SeekBar
+            android:id="@+id/rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="150" />
+
+        <TextView
+            android:id="@+id/pitch_label"
+            style="@style/AlexBody"
+            android:layout_marginTop="8dp" />
+        <SeekBar
+            android:id="@+id/pitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="150" />
+
+        <TextView
+            style="@style/AlexBody"
+            android:layout_marginTop="12dp"
+            android:text="Voice and recognition language" />
+        <RadioGroup
+            android:id="@+id/language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/lang_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textColor="@color/alex_text" />
+            <RadioButton
+                android:id="@+id/lang_bn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Bengali"
+                android:textColor="@color/alex_text" />
+        </RadioGroup>
+        <TextView
+            style="@style/AlexBody"
+            android:text="Bengali only works if your phone's speech recognizer and voices support it." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/test_voice"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Test Alex's voice" />
+
+        <TextView style="@style/AlexSection" android:text="APPEARANCE" />
+        <RadioGroup
+            android:id="@+id/theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/theme_system"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="System"
+                android:textColor="@color/alex_text" />
+            <RadioButton
+                android:id="@+id/theme_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Light"
+                android:textColor="@color/alex_text" />
+            <RadioButton
+                android:id="@+id/theme_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Dark"
+                android:textColor="@color/alex_text" />
+        </RadioGroup>
+
+        <TextView style="@style/AlexSection" android:text="PERMISSIONS" />
+        <TextView
+            android:id="@+id/perm_status"
+            style="@style/AlexBody" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_app_settings"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Open Android app settings" />
+
+        <TextView style="@style/AlexSection" android:text="ACCESSIBILITY (OPTIONAL)" />
+        <TextView
+            android:id="@+id/a11y_status"
+            style="@style/AlexBody" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/a11y_enable"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Set up accessibility" />
+
+        <TextView style="@style/AlexSection" android:text="PRIVACY" />
+        <TextView
+            style="@style/AlexBody"
+            android:text="Alex only listens while you've tapped the button, and the screen shows when it is listening. There is no background listening or wake word in this version. Conversation history is stored encrypted on this device unless you turn it off." />
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/keep_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Keep conversation history (encrypted)"
+            android:textColor="@color/alex_text" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear_history"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Clear conversation" />
+    </LinearLayout>
+</ScrollView>

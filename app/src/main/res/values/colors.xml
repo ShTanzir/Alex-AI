@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="alex_accent">#7868F5</color>
+    <color name="alex_accent_soft">#267868F5</color>
+    <color name="alex_bg">#F5F6FA</color>
+    <color name="alex_surface">#FFFFFF</color>
+    <color name="alex_text">#15151B</color>
+    <color name="alex_text_secondary">#666875</color>
+    <color name="alex_glass">#E6FFFFFF</color>
+    <color name="alex_glass_stroke">#1A000000</color>
+    <color name="alex_error">#D93B3B</color>
+    <color name="alex_ok">#2E9E5B</color>
+</resources>

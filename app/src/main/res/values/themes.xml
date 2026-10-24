@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Alex" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/alex_accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/alex_surface</item>
+        <item name="colorSurfaceContainer">@color/alex_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/alex_surface</item>
+        <item name="colorOnSurface">@color/alex_text</item>
+        <item name="colorOnSurfaceVariant">@color/alex_text_secondary</item>
+        <item name="android:colorBackground">@color/alex_bg</item>
+        <item name="colorOnBackground">@color/alex_text</item>
+        <item name="colorError">@color/alex_error</item>
+        <item name="android:statusBarColor">@color/alex_bg</item>
+        <item name="android:navigationBarColor">@color/alex_bg</item>
+        <item name="android:textColorPrimary">@color/alex_text</item>
+        <item name="android:textColorSecondary">@color/alex_text_secondary</item>
+    </style>
+
+    <style name="AlexSection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/alex_accent</item>
+    </style>
+
+    <style name="AlexBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/alex_text_secondary</item>
+    </style>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Alex AI</string>
+    <string name="accessibility_description">Lets Alex press Back, open recent apps and scroll when you ask it to. It does not read or store what is on your screen.</string>
+</resources>

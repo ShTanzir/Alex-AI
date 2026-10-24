@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity"
+            android:textColor="@color/alex_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView style="@style/AlexSection" android:text="SHORTCUTS" />
+        <TextView
+            style="@style/AlexBody"
+            android:text="Save a name for a built-in command, like &quot;open YouTube&quot; or &quot;open Bluetooth settings&quot;. Tap to run, long-press to delete. Shortcuts still ask for confirmation when needed." />
+
+        <LinearLayout
+            android:id="@+id/shortcuts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_shortcut"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Add shortcut" />
+
+        <TextView style="@style/AlexSection" android:text="RECENT ACTIONS" />
+        <LinearLayout
+            android:id="@+id/recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>
